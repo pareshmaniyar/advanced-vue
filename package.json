@@ -23,20 +23,22 @@
   },
   "homepage": "https://github.com/pareshmaniyar/advanced-vue#readme",
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.3.1",
-    "vue-style-loader": "^4.1.2",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@vue/babel-preset-app": "^4.3.1",
     "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-vue": "^2.0.2",
     "html-webpack-plugin": "^4.3.0",
     "vue-loader": "^15.9.2",
+    "vue-style-loader": "^4.1.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
