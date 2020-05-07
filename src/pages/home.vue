@@ -1,6 +1,6 @@
 <template>
     <div>
-        Wow! That's fun!
+        Home
     </div>
 </template>
 <script>
