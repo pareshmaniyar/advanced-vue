@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="lightMode?'light':'dark'">
         <div class="title">
             Wow! That's fun!
         </div>
@@ -12,9 +12,19 @@
     </div>
 </template>
 <script>
-
 export default {
-    name: 'app'
+    name: 'app',
+    data() {
+        return {
+            lightMode: true
+        }
+    },
+    mounted() {
+        // lightMode () {
+            // return this.$store.getters.mode
+        // }
+        console.log("this.$store: ", this.$store);
+    }
 }
 </script>
 <style lang="scss" scoped>
