@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'app.js'
+        filename: '[name].[hash].js'
     },
     // optimization: {
     //     minimizer: [new UglifyJsPlugin()],
