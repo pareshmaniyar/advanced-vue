@@ -1,5 +1,6 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require(`vue-loader`);
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,6 +8,9 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'app.js'
     },
+    // optimization: {
+    //     minimizer: [new UglifyJsPlugin()],
+    // },
     module: {
         rules: [
             {
