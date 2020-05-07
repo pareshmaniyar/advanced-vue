@@ -1,6 +1,7 @@
-import Home from '../pages/home.vue'
-import Blog from '../pages/blog.vue'
-import Features from '../pages/features.vue'
+
+const Home = () => import('../pages/home.vue')
+const Blog = () => import('../pages/blog.vue')
+const Features = () => import('../pages/features.vue')
 
 export default [
     {
