@@ -9,7 +9,7 @@
             <router-link to="/features">features</router-link>
         </header>
         <router-view v-on:changetitle="changeTitle($event)">
-            Random stuff to see in the footer
+            <b>Random stuff to see in the footer</b>
         </router-view>
     </div>
 </template>
