@@ -16,7 +16,7 @@ export const store = new VueX.Store({
     },
     strict: true,
     actions: {
-        toggle({commit}) {
+        toggleAction({commit}) {
             commit('toggle');
         }
     }

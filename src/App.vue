@@ -12,17 +12,19 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
     name: 'app',
     data() {
         return {
-            // lightMode: true
+
         }
     },
     computed: {
-        lightMode () {
-            return this.$store.getters.mode
-        }
+        ...mapGetters({
+            lightMode: 'mode'
+        })
     }
 }
 </script>

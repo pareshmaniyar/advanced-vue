@@ -1,13 +1,19 @@
 <template>
     <div>
         Features
-        <button @click="$store.dispatch('toggle')">Toggle</button>
+        <button @click="switchBackgorund">Toggle</button>
     </div>
 </template>
 <script>
+import { mapMutations } from 'vuex';
 
 export default {
-    name: 'features'
+    name: 'features',
+    methods: {
+        ...mapMutations({
+            switchBackgorund: 'toggle'
+        })
+    }
 }
 </script>
 <style>

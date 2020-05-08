@@ -16,10 +16,10 @@
 5. [ ] $event
 
 ### VueX and Middleware
-1. [ ] mapState
-2. [ ] mapGetters
-3. [ ] mapMutations
-4. [ ] mapActions
+1. [x] mapState
+2. [x] mapGetters
+3. [x] mapMutations
+4. [x] mapActions
 5. [ ] Modules
 6. [ ] Integrate with socket using plugin
 

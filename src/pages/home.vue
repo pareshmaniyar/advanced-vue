@@ -1,7 +1,7 @@
 <template>
     <div>
         Home
-        <button @click="$store.dispatch('toggle')">Toggle</button>
+        <button @click="$store.dispatch('toggleAction')">Toggle</button>
     </div>
 </template>
 <script>
