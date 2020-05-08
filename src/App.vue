@@ -1,13 +1,18 @@
 <template>
     <div :class="lightMode?'light':'dark'">
-        <div class="title">
-            {{title}}
+        <div>
+            <b-navbar type="dark" variant="dark">
+                <b-navbar-nav>
+                    <b-nav-item :to="'home'">Home</b-nav-item>
+                    <b-nav-item :to="'blog'">Blog</b-nav-item>
+                    <b-nav-item :to="'features'">Features</b-nav-item>
+                    <b-nav-item :to="'store'">Store</b-nav-item>
+                </b-navbar-nav>
+            </b-navbar>
         </div>
-        <header>
-            <router-link to="/home">home</router-link>
-            <router-link to="/blog">blog</router-link>
-            <router-link to="/features">features</router-link>
-        </header>
+        <b-card :title="title">
+            Practice makes a man confident in the Interview
+        </b-card>
         <router-view v-on:changetitle="changeTitle($event)">
             <b>Random stuff to see in the footer</b>
         </router-view>
@@ -39,19 +44,6 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     @import 'App.scss';
-    header {
-        a {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px;
-        }
-    }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div>
-        Home
-        <button @click="$store.dispatch('toggleAction')">Toggle</button>
-        <button @click="changeTitle">Change Title</button>
+        <h1>Home</h1>
+        <b-button @click="$store.dispatch('toggleAction')">Toggle</b-button>
+        <b-button variant="warning" @click="changeTitle">Change Title</b-button>
         <footer>
             <slot></slot>
         </footer>

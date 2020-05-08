@@ -2,6 +2,7 @@
 const Home = () => import('../pages/home.vue')
 const Blog = () => import('../pages/blog.vue')
 const Features = () => import('../pages/features.vue')
+const Store = () => import('../pages/store.vue')
 
 export default [
     {
@@ -18,6 +19,11 @@ export default [
         path: '/features',
         component: Features,
         name: 'features'
+    },
+    {
+        path: '/store',
+        component: Store,
+        name: 'store'
     },
     {
         path: '*',

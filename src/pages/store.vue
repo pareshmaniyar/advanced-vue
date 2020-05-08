@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Features</h1>
+        <h1>Store</h1>
         <b-button @click="switchBackgorund">Toggle</b-button>
         <b-button variant="warning" @click="changeTitle">Change Title</b-button>
     </div>
@@ -10,7 +10,7 @@ import { mapMutations } from 'vuex';
 import { eventBus } from '../index'
 
 export default {
-    name: 'features',
+    name: 'store',
     methods: {
         ...mapMutations({
             switchBackgorund: 'toggle'

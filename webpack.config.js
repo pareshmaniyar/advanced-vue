@@ -2,6 +2,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require(`vue-loader`);
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     output: {
@@ -41,6 +42,7 @@ module.exports = {
         new VueLoaderPlugin(),
         new HTMLWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ]
 }

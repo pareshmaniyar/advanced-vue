@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/pareshmaniyar/advanced-vue#readme",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.3.0"
@@ -38,6 +40,7 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   }

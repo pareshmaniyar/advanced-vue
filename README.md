@@ -1,12 +1,14 @@
 # Concepts to Implement
 
 ### Webpack
-1. [ ] Minify
-2. [ ] Uglify
+1. [ ] Minify - Does vue loader handle this?
+2. [ ] Uglify - Does vue loader handle this?
 3. [x] Lazy loading
 4. [x] SASS complier
 5. [ ] Report
 6. [ ] Optimization
+
+### Vue Router
 
 ### Advanced Concepts to implement:
 1. [ ] Mixin
@@ -22,5 +24,3 @@
 4. [x] mapActions
 5. [ ] Modules
 6. [ ] Integrate with socket using plugin
-
-### Vue Router

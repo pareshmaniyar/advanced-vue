@@ -1,8 +1,8 @@
 <template>
     <div :class="!textMode?'text-light':''">
-        Blog
-        <button @click="changeBackGround">Toggle</button>
-        <button @click="changeTitle">Change Title</button>
+        <h1>Blog</h1>
+        <b-button @click="changeBackGround">Toggle</b-button>
+        <b-button variant="warning" @click="changeTitle">Change Title</b-button>
     </div>
 </template>
 <script>
