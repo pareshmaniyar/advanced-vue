@@ -16,14 +16,13 @@ export default {
     name: 'app',
     data() {
         return {
-            lightMode: true
+            // lightMode: true
         }
     },
-    mounted() {
-        // lightMode () {
-            // return this.$store.getters.mode
-        // }
-        console.log("this.$store: ", this.$store);
+    computed: {
+        lightMode () {
+            return this.$store.getters.mode
+        }
     }
 }
 </script>

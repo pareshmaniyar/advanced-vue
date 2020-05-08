@@ -1,6 +1,7 @@
 <template>
     <div>
         Features
+        <button @click="$store.dispatch('toggle')">Toggle</button>
     </div>
 </template>
 <script>

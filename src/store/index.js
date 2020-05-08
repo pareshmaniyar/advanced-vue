@@ -1,9 +1,8 @@
 import Vue from 'vue';
 import VueX from 'vuex';
-
 Vue.use(VueX);
 
-const store = new VueX.Store({
+export const store = new VueX.Store({
     state: {
         mode: true
     },
@@ -14,6 +13,11 @@ const store = new VueX.Store({
     },
     getters: {
         mode: state => state.mode
+    },
+    strict: true,
+    actions: {
+        toggle({commit}) {
+            commit('toggle');
+        }
     }
-})
-export default store;
+});
