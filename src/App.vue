@@ -8,7 +8,7 @@
             <router-link to="/blog">blog</router-link>
             <router-link to="/features">features</router-link>
         </header>
-        <router-view></router-view>
+        <router-view v-on:changetitle="changeTitle($event)"></router-view>
     </div>
 </template>
 <script>
@@ -29,6 +29,11 @@ export default {
     },
     created(){
         eventBus.$on('ChangeTitle', title => this.title = title);
+    },
+    methods: {
+        changeTitle(title) {
+            this.title = title;
+        }
     }
 }
 </script>
