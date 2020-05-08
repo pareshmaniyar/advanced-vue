@@ -1,7 +1,7 @@
 <template>
     <div :class="lightMode?'light':'dark'">
         <div class="title">
-            Wow! That's fun!
+            {{title}}
         </div>
         <header>
             <router-link to="/home">home</router-link>
@@ -13,18 +13,22 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
+import { eventBus } from './index'
 
 export default {
     name: 'app',
     data() {
         return {
-
+            title: 'Wow! That\'s fun!'
         }
     },
     computed: {
         ...mapGetters({
             lightMode: 'mode'
         })
+    },
+    created(){
+        eventBus.$on('ChangeTitle', title => this.title = title);
     }
 }
 </script>

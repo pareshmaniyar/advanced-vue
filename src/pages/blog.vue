@@ -2,10 +2,12 @@
     <div :class="!textMode?'text-light':''">
         Blog
         <button @click="changeBackGround">Toggle</button>
+        <button @click="changeTitle">Change Title</button>
     </div>
 </template>
 <script>
 import { mapState, mapActions } from 'vuex';
+import { eventBus } from '../index'
 
 export default {
     name: 'blog',
@@ -22,7 +24,10 @@ export default {
     methods: {
         ...mapActions({
             changeBackGround: 'toggleAction'
-        })
+        }),
+        changeTitle(){
+            eventBus.$emit('ChangeTitle', 'Wow! That Blog was fun!');
+        }
     }
 }
 </script>
