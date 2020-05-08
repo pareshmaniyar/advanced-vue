@@ -8,7 +8,9 @@
             <router-link to="/blog">blog</router-link>
             <router-link to="/features">features</router-link>
         </header>
-        <router-view v-on:changetitle="changeTitle($event)"></router-view>
+        <router-view v-on:changetitle="changeTitle($event)">
+            Random stuff to see in the footer
+        </router-view>
     </div>
 </template>
 <script>

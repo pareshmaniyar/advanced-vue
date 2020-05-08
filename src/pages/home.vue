@@ -3,6 +3,9 @@
         Home
         <button @click="$store.dispatch('toggleAction')">Toggle</button>
         <button @click="changeTitle">Change Title</button>
+        <footer>
+            <slot></slot>
+        </footer>
     </div>
 </template>
 <script>

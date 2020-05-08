@@ -10,10 +10,10 @@
 
 ### Advanced Concepts to implement:
 1. [ ] Mixin
-2. [ ] Slots
+2. [x] Slots
 3. [ ] Directives
-4. [ ] Event Bus
-5. [ ] $event
+4. [x] Event Bus
+5. [x] $event
 
 ### VueX and Middleware
 1. [x] mapState
