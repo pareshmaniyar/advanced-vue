@@ -26,16 +26,15 @@
                             <b-form-input
                             id="input-2"
                             v-model="feature_to_add"
-                            required
-                            placeholder="Enter Features"
-                            v-on:keyup.enter="onFeatureSubmit"
+                            placeholder="Enter Features.."
+                            v-on:keyup.enter="addFeatures(feature_to_add),feature_to_add = ''"
                             ></b-form-input>
                         </b-form-group>
                     </b-form>
                     <b-list-group>
-                        <b-list-group-item v-for="(item, index) in features">
+                        <b-list-group-item v-for="(item, index) in features" :key="index">
                             {{item}}
-                            <b-button @click="removeFeature(index)">Remove</b-button>
+                            <b-button @click="removeFeatures(index)">Remove</b-button>
                         </b-list-group-item>
                     </b-list-group>
                 </b-card-text>
@@ -47,12 +46,21 @@
                 align="center"
             >
                 <b-card-text>
+                    <b-form>
+                        <b-form-group id="input-group-2" label="Add blogs:" label-for="input-2">
+                            <b-form-input
+                            id="input-2"
+                            v-model="blog_to_add"
+                            placeholder="Enter blogs.."
+                            v-on:keyup.enter="addContent(blog_to_add),blog_to_add = ''"
+                            ></b-form-input>
+                        </b-form-group>
+                    </b-form>
                     <b-list-group>
-                        <b-list-group-item>Cras justo odio</b-list-group-item>
-                        <b-list-group-item>Dapibus ac facilisis in</b-list-group-item>
-                        <b-list-group-item>Morbi leo risus</b-list-group-item>
-                        <b-list-group-item>Porta ac consectetur ac</b-list-group-item>
-                        <b-list-group-item>Vestibulum at eros</b-list-group-item>
+                        <b-list-group-item v-for="(item, index) in content" :key="index">
+                            {{item}}
+                            <b-button @click="removeContent(index)">Remove</b-button>
+                        </b-list-group-item>
                     </b-list-group>
                 </b-card-text>
             </b-card>
@@ -64,7 +72,7 @@
     </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 import { eventBus } from './index'
 
 export default {
@@ -73,13 +81,14 @@ export default {
         return {
             title: 'Wow! That\'s fun!',
             feature_to_add: '',
-            features: ['asd','asfdf']
+            blog_to_add: ''
         }
     },
     computed: {
         ...mapGetters({
             lightMode: 'mode',
-            features
+            features: 'features',
+            content: 'blog/content'
         })
     },
     created(){
@@ -89,13 +98,11 @@ export default {
         changeTitle(title) {
             this.title = title;
         },
-        onFeatureSubmit(){
-            console.log("onFeatureSubmit");
-            this.feature_to_add = '';
-        },
-        removeFeature(index){
-            console.log("onFeatureSubmit");
-        }
+        ...mapMutations(['addFeatures', 'removeFeatures']),
+        ...mapMutations({
+            addContent: 'blog/addContent',
+            removeContent: 'blog/removeContent'
+        })
     }
 }
 </script>

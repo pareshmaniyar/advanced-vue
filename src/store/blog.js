@@ -8,7 +8,7 @@ export const blog = {
             state.content.push(content);
         },
         removeContent(state, index) {
-            state.content.splice(index);
+            state.content.splice(index, 1);
         }
     },
     actions: {

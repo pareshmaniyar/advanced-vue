@@ -11,7 +11,7 @@
 ### Vue Router
 
 ### Advanced Concepts to implement:
-1. [ ] Mixin
+1. [x] Mixin
 2. [x] Slots
 3. [ ] Directives
 4. [x] Event Bus

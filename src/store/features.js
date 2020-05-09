@@ -7,7 +7,7 @@ export const features = {
             state.features.push(features);
         },
         removeFeatures(state, index) {
-            state.features.splice(index);
+            state.features.splice(index, 1);
         }
     },
     actions: {
