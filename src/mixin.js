@@ -1,6 +1,6 @@
 import { eventBus } from './index'
 
-export const firtMixin = {
+export const firstMixin = {
     
     methods: {
         changeTitle(){

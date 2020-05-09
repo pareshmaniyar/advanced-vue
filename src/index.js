@@ -3,16 +3,17 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import routes from './routes';
 import {store} from './store';
-import { firtMixin } from './mixin';
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { firstMixin } from './mixin';
+import { BButton } from 'bootstrap-vue'
 
-// Install BootstrapVue
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
-
+Vue.component('b-button',BButton);
+Vue.directive('focus', {
+    inserted: function(el) {
+        el.focus();
+    }
+})
 export const eventBus = new Vue();
-Vue.mixin(firtMixin);
+Vue.mixin(firstMixin);
 Vue.use(VueRouter);
 
 new Vue({

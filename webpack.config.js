@@ -1,17 +1,21 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require(`vue-loader`);
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
         filename: '[name].[hash].js'
     },
-    // optimization: {
-    //     minimizer: [new UglifyJsPlugin()],
-    // },
+    devtool: false,
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+    },
     module: {
         rules: [
             {

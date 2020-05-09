@@ -13,7 +13,7 @@
 ### Advanced Concepts to implement:
 1. [x] Mixin
 2. [x] Slots
-3. [ ] Directives
+3. [x] Directives
 4. [x] Event Bus
 5. [x] $event
 
@@ -22,5 +22,5 @@
 2. [x] mapGetters
 3. [x] mapMutations
 4. [x] mapActions
-5. [ ] Modules
+5. [x] Modules
 6. [ ] Integrate with socket using plugin
